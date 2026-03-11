@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+		<file>images/logo.png</file>
+        <file>images/RECTANGL.BMP</file>
+    </qresource>
+	<qresource prefix="/">
+		<file>qmls/alarms.qml</file>
+	</qresource>
+</RCC>
