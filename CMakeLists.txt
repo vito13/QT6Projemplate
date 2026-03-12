@@ -61,5 +61,12 @@ if(WIN32)
     endfunction()
 endif()
 
+# 在 configure 阶段复制 compile_commands.json 到源代码目录，方便 clangd 等工具使用
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+if(EXISTS ${CMAKE_BINARY_DIR}/compile_commands.json)
+    file(COPY ${CMAKE_BINARY_DIR}/compile_commands.json
+         DESTINATION ${CMAKE_SOURCE_DIR})
+endif()
+
 # 添加子工程
 add_subdirectory(src)

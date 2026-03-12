@@ -2,19 +2,19 @@ import QtQuick
 import QtQuick.Controls
 
 
-ApplicationWindow {
+Window  {
     id: window
     width: 400
     height: 300
     visible: true
     title: "Quick Test"
-    color: "#ff00ff"
+    color: "#ff0000"
 
     Rectangle {
         anchors.centerIn: parent
-        color: "#00ffff"
+        color: "#e4cd05"
         width: parent.width * 0.8
-        height: parent.height * 0.8
+        height: parent.height * 0.5
         focus: true
         Text {
             id: keyview
@@ -34,7 +34,7 @@ ApplicationWindow {
     }
     
     Button {
-        text: "Click me"
+        text: "Click me!!!"
         checkable: true
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter

@@ -3,6 +3,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QDIR>
+#include <QQuickView>
+#include <QProcessEnvironment>
 
 int testDLLFunctions(int argc, char* argv[])
 {
@@ -15,33 +17,32 @@ int testDLLFunctions(int argc, char* argv[])
 }
 
 
-int quickTest(int argc, char* argv[])
+int quickEngineTest(int argc, char* argv[])
 {
 	QGuiApplication app(argc, argv);
 	QQmlApplicationEngine engine;
-	const QUrl url("qrc:/qmls/alarms.qml");
+	engine.addImportPath("C:/Qt/6.10.2/msvc2022_64/qml");
+	engine.load(QUrl(QStringLiteral("qrc:/qmls/component.qml")));
+	return app.exec();
+}
 
-	QObject::connect(
-		&engine,
-		&QQmlApplicationEngine::objectCreated,
-		&app,
-		[url](QObject* obj, const QUrl& objUrl)
-		{
-			if (!obj && url == objUrl)
-				QCoreApplication::exit(-1);
-		},
-		Qt::QueuedConnection);
-
-	engine.load(url);
+int QuickViewTest(int argc, char* argv[])
+{
+	QGuiApplication app(argc, argv);
+	QQuickView viewer;
+	viewer.setResizeMode(QQuickView::SizeRootObjectToView);
+	viewer.setSource(QUrl("qrc:/qmls/component.qml"));
+	viewer.show();
 	return app.exec();
 }
 
 int main(int argc, char *argv[])
 {
-	
+
 	return
-		quickTest(argc, argv);
-		//testDLLFunctions(argc, argv);
+		// QuickViewTest(argc, argv); // 显示为白
+		// quickEngineTest(argc, argv);
+		testDLLFunctions(argc, argv);
 	
 	
 	

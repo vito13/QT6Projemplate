@@ -5,5 +5,7 @@
     </qresource>
 	<qresource prefix="/">
 		<file>qmls/alarms.qml</file>
+		<file>qmls/signal.qml</file>
+		<file>qmls/component.qml</file>
 	</qresource>
 </RCC>

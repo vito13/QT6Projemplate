@@ -3,3 +3,5 @@ bin
 out
 CMakeUserPresets.json
 CMakePresets.json
+.cache
+compile_commands.json
