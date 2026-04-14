@@ -1,11 +1,23 @@
 <RCC>
     <qresource prefix="/">
-		<file>images/logo.png</file>
+        <file>images/logo.png</file>
+        <file>images/background.png</file>
         <file>images/RECTANGL.BMP</file>
     </qresource>
-	<qresource prefix="/">
-		<file>qmls/alarms.qml</file>
-		<file>qmls/signal.qml</file>
-		<file>qmls/component.qml</file>
-	</qresource>
+    <qresource prefix="/">
+        <file>qmls/DetailsDlg.qml</file>
+        <file>qmls/quicktableview.qml</file>
+        <file>qmls/clock.qml</file>
+        <file>qmls/alarms.qml</file>
+        <file>qmls/signal.qml</file>
+        <file>qmls/component.qml</file>
+        <file>qmls/scripttut.qml</file>
+        <file>qmls/listview.qml</file>
+        <file>qmls/MessageLabel.qml</file>
+        <file>qmls/modelview.qml</file>
+
+        <file>qmlsnowin/R1.qml</file>
+        <file>qmlsnowin/R2.qml</file>
+        <file>qmlsnowin/R3.qml</file>
+    </qresource>
 </RCC>

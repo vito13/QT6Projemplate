@@ -4,22 +4,23 @@ import QtQuick.Controls 2.15
 
 
 Window {
+    title: qsTr("Tool V1.0.0")
     visible: true
     width: 400
     height: 300
 
-    // 1️⃣ 定义 Component
+    // 定义 Component
     Component {
         id: redRectComponent
 
         Rectangle {
             width: 100
             height: 100
-            color: "green"
+            color: "red"
         }
     }
 
-    // 2️⃣ 按钮点击时动态创建 Rectangle
+    // 按钮点击时动态创建 Rectangle
     MouseArea {
         anchors.fill: parent
         onClicked: {

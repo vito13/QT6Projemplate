@@ -1,6 +1,11 @@
 # QT6Projemplate
 QT6Projemplate
 
+# 非msvc启动方式
+
+- 开启 x64 Native Tools Command Prompt for VS 2022
+- 执行 code，开启vscode即可编译
+
 # 注意事项
  - 可以使用vs2022（带有qt扩展）开启cmakelist方式作为ide
  - 可以使用vscode（带有cmake与qt扩展，见下面）开启目录方式作为ide，使用vs的终端启动code避免找不到vs的编译器（启用vs的环境变量）

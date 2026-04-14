@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/"/>
+    <qresource prefix="/icons">
+        <file>Icon1242.ico</file>
+        <file>DELETE.BMP</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>background.png</file>
+        <file>Logo.png</file>
+    </qresource>
+</RCC>

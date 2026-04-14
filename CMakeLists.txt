@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.21)
 
 project(MyQtProject)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "C://Qt//6.10.2//msvc2022_64//lib//cmake//Qt6")
 
 # 运行程序、动态库、静态库都放在 bin 目录下，区分 debug/release
@@ -23,12 +24,17 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 # 查找 Qt
-find_package(Qt6 REQUIRED COMPONENTS
+find_package(Qt6 COMPONENTS
     Core
     Widgets
+    Sql
+    Network
+    StateMachine
     Quick
+    QuickWidgets
     QuickControls2
     QuickLayouts
+    REQUIRED
 )
 
 if(WIN32)
@@ -55,6 +61,8 @@ if(WIN32)
                 COMMAND "${WINDEPLOYQT}" "$<TARGET_FILE:${target_name}>"
                         --qmldir "${QML_DIR}"
                         --force
+                        --no-compiler-runtime
+                        --verbose 1
                 COMMENT "Deploying Qt DLLs and QML plugins for ${target_name}"
             )
         endif()

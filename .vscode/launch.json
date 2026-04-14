@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug demo",
+            "name": "listview Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/debug/demo.exe",
+            "program": "${workspaceFolder}/bin/debug/listview.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
