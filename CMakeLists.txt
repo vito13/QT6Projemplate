@@ -30,6 +30,7 @@ find_package(Qt6 COMPONENTS
     Sql
     Network
     StateMachine
+    Svg
     Quick
     QuickWidgets
     QuickControls2

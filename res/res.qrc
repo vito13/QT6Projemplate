@@ -15,9 +15,9 @@
         <file>qmls/listview.qml</file>
         <file>qmls/MessageLabel.qml</file>
         <file>qmls/modelview.qml</file>
-
         <file>qmlsnowin/R1.qml</file>
         <file>qmlsnowin/R2.qml</file>
         <file>qmlsnowin/R3.qml</file>
+        <file>qmls/main.qml</file>
     </qresource>
 </RCC>

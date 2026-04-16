@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgba(32, 80, 96, 100);</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="leftMargin">
@@ -38,11 +38,7 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">#topPanel {
-background-color: qlineargradient(spread:reflect, x1:0.5,
-y1:0, x2:0, y2:0, stop:0 rgba(91, 204, 233, 100), stop:1
-rgba(32, 80, 96, 100));
-}</string>
+      <string notr="true"/>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <property name="leftMargin">

@@ -15,6 +15,7 @@ PRIVATE
     Qt6::Widgets
     Qt6::Network
     Qt6::StateMachine
+    Qt6::Svg
 )
 
 # add_deployable_executable(${HHH_NAME})
